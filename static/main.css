@@ -1,0 +1,363 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before{
+  box-sizing: inherit
+}
+
+html{
+    font-family: "Public Sans", sans-serif;
+}
+
+body{
+    box-sizing: border-box;
+}
+
+
+/* ******************* navbar header ******************************************* */
+
+.container-fluid{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+}
+
+.logo{
+    width: 4rem;
+    height: 4rem;
+}
+
+.navbar-nav{
+    display:flex;
+    align-items: center;
+    list-style: none;
+    font-size: 1.2em;
+    
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+}
+
+.nav-item:not(:last-of-type) {
+    margin-right:1rem
+}
+
+.nav-link{
+    text-decoration: none;
+    color:aliceblue;
+    padding: .2rem .3rem .2rem .3rem;
+    border-radius:6px
+    
+}
+
+.nav-link:hover{
+    background-color: rgb(202, 184, 184);
+    
+}
+
+.nav-link--active{
+    
+    background-color: rgb(202, 184, 184);
+}
+
+.navbar-nav1{
+    display:flex;
+    align-items: center;
+    margin:.5rem 1rem .5rem 0;
+
+}
+
+.button__wallet{
+    display:flex;
+    align-items:center;
+    margin-right: .7rem;
+    padding:.2rem .8rem .2rem .8rem;
+    font-size: 1em;
+    background-color: white;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+
+}
+
+.button__wallet:hover{
+    background-color: rgb(202, 184, 184);
+}
+
+.wallet__logo{
+    transform: translateY(-1px);
+    margin-right:.5rem;
+
+}
+
+.button__ethereum{
+    display:flex;
+    align-items: center;
+    border:none;
+    border-radius:6px;
+    padding:.2rem .8rem .2rem .8rem;
+    background-color: white;
+    cursor:pointer;
+}
+
+.button__ethereum:hover{
+    background-color: rgb(202, 184, 184);
+}
+
+.ethereum__logo{
+    width:2.5rem;
+    height:2.5rem;
+    border: 1px solid black;
+    border-radius: 50%;
+   
+}
+
+.network__dropdown-icon{
+    color:black;
+    margin-left:1rem;
+   
+}
+
+
+
+.dropdown {
+   position: relative;
+    display: inline-block;
+  }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+ /* Links inside the dropdown */
+.dropdown-content--item {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  /* Change color of dropdown links on hover */
+  .dropdown-content--item:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+
+
+/* ********************************************* Body main *********************************** */
+
+
+.top__heading{
+    margin: 2rem 0 1rem 1rem;
+    font-size:2em;
+    
+}
+
+.text1{
+    font-size:1.5em;
+    margin: 1rem 0 1rem 1rem
+
+}
+
+.button__launch{
+    border:none;
+    border-radius: 6px;
+    background-color: rgb(16, 230, 159);
+    font-size:1em;
+    color:white;
+    margin: 0rem 0 2rem 1rem;
+    padding: .4rem 1rem .4rem 1rem;
+}
+
+
+.card{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 1rem 1rem 1rem 1rem;
+    
+}
+
+.card1{
+    display:flex;
+    align-items: center;
+    box-shadow: 0px 1px 1px 1px black;
+    font-size:1.1em;
+    margin-right:1rem;
+    padding: 2rem .2rem 2rem 1.5rem;
+}
+
+.card__large{
+    display: flex;
+    
+}
+
+.card__sub{
+    margin-left: 2rem;
+}
+
+.card__mega{
+    box-shadow: 0px 1px 1px 1px black;
+    margin: 2rem .5rem;
+    padding: 3rem 1rem 3rem .5rem;
+
+}
+
+.card__large{
+    margin: 2rem 1rem 2rem 1rem;
+    box-shadow: 0px 1px 1px 1px black;
+}
+
+
+
+.card__large--sub{
+    display:flex;
+    flex-direction: column;
+    margin: 3rem 1rem 3rem 1rem ;
+
+}
+
+.card__large--sub--sub{
+    display:flex;
+    align-items: center;
+    margin-bottom: .5rem;
+
+}
+
+.card__large--sub--sub> h3{
+    margin-left:1rem;
+    
+}
+
+.card__large2{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin: 3rem 1rem 1rem 1rem;
+}
+
+.card__mega > h1{
+    margin-left:.5rem
+}
+
+.card__token{
+    display:flex;
+    flex-direction: column;
+    margin:0 1rem 2rem 0rem;
+    box-shadow: 0px 1px 1px 1px black;
+
+}
+
+.card__token--sub{
+    display:flex;
+    align-items: center;
+    background-color: #83aaaa;
+    padding: .4rem 0 .4rem .2rem;
+   
+}
+
+.card__token--sub > h3{
+    margin-left:.5rem;
+}
+
+.ziomi__logo{
+    width:3rem;
+    height: 3rem;
+   
+
+}
+
+.zlp__logo{
+    width:3rem;
+    height: 3rem;
+    
+}
+
+.card__token > p{
+    margin:.2rem;
+    line-height:1em;
+}
+
+.button__buy{
+    background-color: #83aaaa;
+    margin: 1rem auto 1rem .2rem;
+    font-size:1em;
+    padding: .2rem 1rem .2rem 1rem;
+    border:none;
+    border-radius: 6px;
+}
+
+
+
+/* ***************************************************** Body Footer ************************************* */
+
+footer{
+    display:flex;
+    flex-direction: column;
+}
+
+.footer__main{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #83aaaa;
+    width: fit-content;
+    margin: 0 auto;
+    padding-right:2rem;
+}
+
+.footer__main> p {
+    color:white;
+    font-size:1.5em;
+}
+
+.logo__romi{
+    width: 4rem;
+    height: 4rem;
+}
+
+.footer__logo{
+    display:flex;
+    align-items: center;
+    margin:1.2rem auto;
+
+}
+
+.footer__logo--item:not(:last-of-type){
+    margin-right:1rem
+}
+
+.footer__content{
+    display:flex;
+    margin:.5rem auto;
+
+}
+
+.footer__content >p:not(:last-of-type){
+    margin-right:1rem;
+}
+
+
+
+
+
+

@@ -1,0 +1,296 @@
+{% extends 'layout.html' %}
+
+{% from 'js.html' import ring1,ring2 %}
+
+{% block main %}
+
+<div class="dashboard">
+<div class="dashboard__stats">
+    <h1>Stats</h1> 
+    <img src="/static/media/ic_avalanche_24.4f4088f4.svg" alt="avalanche24Icon" class="logo__stats">
+</div>
+
+<p>Ethereum Total Stats start from 06 Jan 2022.</p>
+   <p> For detailed stats:</p>
+
+</div>
+
+
+
+<!-- ********************************************* Overview vs total stats table ************************* -->
+
+
+
+<div class="card__dashboard">
+    <div class="card__dashboard--sub">
+        
+            <div class="card__dashboard--head">
+                    <h3>Overview</h3>
+            </div> 
+        
+    
+            <table class="table__dashboard">
+                <tbody>
+            <tr class="table__row">
+                    <th class="table__head" > AUM </th>
+                    <td class="table__cell"> $34</td>
+                </tr>
+
+                <tr class="table__row">
+                    <th  class="table__head"> $ZLP Pool </th>
+                    <td class="table__cell"> $34</td>
+                </tr>
+
+                <tr class="table__row">
+                    <th scope='row' class="table__head"> 24h Volume </th>
+                    <td class="table__cell"> $0</td>
+                </tr>
+
+                <tr class="table__row">
+                    <th scope="col" class="table__head"> Long Positions </th>
+                    <td class="table__cell"> $34</td>
+                </tr>
+
+                <tr class="table__row">
+                    <th class="table__head"> Short Positions </th>
+                    <td class="table__cell"> $0</td>
+                </tr>
+            </tbody>
+            </table>
+            </div>
+            
+          
+            
+
+        
+
+        
+
+        <div class="card__dashboard--sub">
+
+            <div class="card__dashboard--head">
+                <h3>Total Stats</h3>
+        </div> 
+            
+        
+            <table class="table__dashboard">
+            <tbody>
+            <tr class="table__row">
+                <th class="table__head" > Total Fees </th>
+                <td class="table__cell"> $0</td>
+            </tr>
+
+            <tr class="table__row">
+                <th scope="row" class="table__head"> Total Volume </th>
+                <td class="table__cell"> $0</td>
+            </tr>
+
+            <tr class="table__row">
+                <th scope='row' class="table__head"> Floor Price Fund </th>
+                <td class="table__cell"> $627,826</td>
+            </tr>
+
+            
+        </tbody>
+        </table>
+   
+
+    
+ </div>
+  
+</div>
+
+
+
+
+<!-- ************************* $Zomi & $Zlp Table ************************************  -->
+
+
+<div class="dashboard">
+    <div class="dashboard__stats">
+        <h1>Tokens</h1> 
+        <img src="/static/media/ic_avalanche_24.4f4088f4.svg" alt="avalanche24Icon" class="logo__stats">
+    </div>
+    
+    <p>Platform and $ZLP index tokens.</p>
+      
+    
+    </div>
+
+<div class="token__dashbord">
+<div class="token__dashboard--partition" >
+    <div class="token__dashbord--sub">
+        <div class="token__dashbord--head" >
+        <img src="/static/media/ziomi.png" alt="ziomi-logo" class="ziomi__logo">
+        <div>
+            <h3>$Zomi</h3>
+            <p>$Zomi</p>
+        </div>
+        </div>
+
+        
+        
+           <div class="table__dashboard--tokens">
+            <div class="table__row--token">
+                <h3 > Price </h3>
+                <p > $0.00</p>
+            </div>
+    
+            <div class="table__row--token">
+                <h3> Supply </h3>
+                <p > 10,000 $ZOMI</p>
+            </div>
+    
+            <div class="table__row--token">
+                <h3> Total Staked </h3>
+                <p> $0</p>
+            </div>
+    
+            <div class="table__row--token">
+                <h3> Market Cap </h3>
+                <p> $10</p>
+            </div>
+    
+        </div>     
+        </div>
+
+        {{ring1()}}
+        
+</div>
+   
+
+<div class="token__dashboard--partition">
+    <div class="token__dashbord--sub">
+        <div class="token__dashbord--head" >
+        <img src="/static/media/zlp.png"  alt="zlp-logo" class="zlp__logo"> 
+        <div>
+            <h3>$Zlp</h3>
+            <p>$Zlp</p>
+        </div>
+    </div>
+        
+        
+           <div class="table__dashboard--tokens">
+            <div class="table__row--token">
+                <h3 > Price </h3>
+                <p> $1.139</p>
+            </div>
+    
+            <div class="table__row--token">
+                <h3> Supply </h3>
+                <p> 29 $ZLP</p>
+            </div>
+    
+            <div class="table__row--token">
+                <h3> Total Staked </h3>
+                <p> $34</p>
+            </div>
+    
+            <div class="table__row--token">
+                <h3> Market Cap </h3>
+                <p> $34</p>
+            </div>
+    
+            <div class="table__row--token">
+                <h3> Stablecoin Percentage </h3>
+                <p> 49.50%</p>
+            </div>
+            
+          </div>  
+    </div>
+
+    {{ring2()}}
+
+</div>
+
+</div>
+
+
+<!-- ************************** index ZLP and ZOMI Table**************** -->
+
+<div class = 'card__index'>
+
+    <div class="card__index--head">
+        <h3>$ZLP Index Composition</h3>
+        <img src="/static/media/ic_avalanche_24.4f4088f4.svg" alt="avalanche24Icon" class="logo__stats--index">
+    </div>
+
+    <div class="card__index--sub">
+        <table class="card__index--table">
+            <tbody>
+            <tr class="table__index--rowhead">
+                <th class='table__index--mainhead'>TOKEN</th>
+                <th class='table__index--mainhead'>PRICE</th>
+                <th class='table__index--mainhead'>POOL</th>
+                <th class='table__index--mainhead'>WEIGHT</th>
+                <th class='table__index--mainhead'>UTILIZATION</th>
+            </tr>
+           
+            <tr class="table__index--row">
+            <th class="table__index--head"> <img src="/static/media/eth.svg" alt="Ethereum--logo" class="index__logo"> 
+                <span class="index__span">
+                <h3> Ethereum </h3>
+                <small> ETH </small>
+            </span>
+            </th>
+            <td> $1,789.48 </td>
+            <td>$19</td>
+            <td> 50.49% / 25.00% </td>
+            <td> 0.00%</td>
+
+            </tr >
+
+            <tr class="table__index--row">
+                <th class="table__index--head"> <img src="/static/media/wrapped_bitcoin.svg" alt="wrapped_bitcoin" class="index__logo"> 
+                    <span class="index__span">
+                    <h3>Wrapped_bitcoin</h3>
+                    <small>WBTC</small>
+                </span>
+                </th>
+                <td> $34,279.00 </td>
+                <td>$0</td>
+                <td> 0.00% / 25.00%</td>
+                <td> 0.00%</td>
+    
+            </tr>
+
+            <tr class="table__index--row">
+                <th class="table__index--head"> <img src="/static/media/ape.svg" alt="APE--logo" class="index__logo"> 
+                <span class="index__span">
+                <h3>Apecoin </h3>
+                <small> APE </small>
+            </span>
+                </th>
+                <td> $1.37 </td>
+                <td>$0</td>
+                <td> 0.00% / 25.00%</td>
+                <td> 0.00%</td>
+    
+            </tr>
+           
+
+            <tr class="table__index--row">
+                <th class="table__index--head"> <img src="/static/media/usd.svg" alt="USD--logo" class="index__logo"> 
+                <span class="index__span">
+                <h3> USD Coin </h3>
+                <small> USD </small>
+                </span>
+                </th>
+                <td> $1.00 </td>
+                <td>$0</td>
+                <td>  49.50% / 25.00%</td>
+                <td> 0.00%</td>
+    
+            </tr>
+    </tbody>
+    </table>
+
+    </div>
+
+
+
+</div>
+
+
+
+{% endblock %}

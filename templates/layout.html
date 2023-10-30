@@ -1,0 +1,103 @@
+
+{% from 'footer.html' import footer %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Romi.Finance</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}" >
+    <link rel="stylesheet" href="{{url_for('static',filename='dashboard.css')}}" >
+    <link rel="stylesheet" href="{{url_for('static',filename='earn.css')}}" >
+
+    
+</head>
+
+<body>
+    <h1></h1>
+ 
+    <nav class="navbar">
+        <div class="container-fluid">
+            
+          
+               
+                <ul class="navbar-nav" >
+                    <li class="nav-item"> <a class="nav-link" href="#"><img class='logo' src="/static/media/logo.png" alt="logo"></a>
+                        Romi.Finance</li>
+                    <li class="nav-item">
+                        <a class="nav-link {{'nav-link--active' if request.path=='/' else ''}}"  href="{{url_for('index')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{'nav-link--active' if request.path=='/dashboard' else ''}}" href="{{url_for('dashboard')}}">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#" role="button"  aria-disabled="true">
+                            NFT
+                        </a>
+                      
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{'nav-link--active' if request.path=='/earn' else ''}}" href="{{url_for('earn')}}">Earn</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Buy</a>
+                    </li>
+
+                    
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Ecosystem</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Trade</a>
+                    </li>
+
+                </ul>
+               
+        
+
+            <div class="navbar-nav1">
+
+                <button type="button" class="button__wallet"><img class='wallet__logo' src="/static/media/wallet_logo.png"> Connect Wallet </button>
+
+                <div class="dropdown">
+                <button class="button__ethereum" id="ethereum-button">
+                    <img class="ethereum__logo" src="/static/media/eth.svg" alt="Ethereum">
+                    <svg class="network__dropdown-icon" stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 20 20" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"></path>
+                    </svg> </button>
+                    <div class="dropdown-content">
+                        <a class = 'dropdown-content--item' href="#">Network</a>
+                        <a  class = 'dropdown-content--item' href="#">Ethereum</a>
+                        <a class = 'dropdown-content--item' href="#">Setting</a>
+                        <a class = 'dropdown-content--item' href="#">Language</a>
+                      </div>
+                      
+                    </div>
+                
+                </div>    
+           
+        </div>
+    </nav>
+
+<main>
+
+{%  block main %}
+
+{% endblock %}
+
+</main>
+
+{{footer()}}
+
+
+</body>
+
+</html>

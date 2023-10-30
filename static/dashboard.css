@@ -1,0 +1,227 @@
+.dashboard{
+    display:flex;
+    
+    flex-direction: column;
+    margin: 2rem 0rem 1.5rem 1rem;
+}
+
+.dashboard__stats{
+    display:flex;
+    align-items: center;
+    font-size: 2.8em;
+    margin-bottom: .5rem;
+}
+
+
+.logo__stats{
+    width:3rem;
+    height:3rem;
+    margin-left: .5rem;
+    transform: translateY(10px);
+}
+
+
+/* **********************overview & total stats table*************************** */
+
+.card__dashboard{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    margin:1rem 1rem 2rem 1rem;
+}
+
+.card__dashboard--sub{
+   
+    box-shadow: 0 1px 1px 1px black;
+    padding: 0rem 0rem .4rem 0rem;
+}
+
+.card__dashboard--sub:not(:last-of-type){
+     margin-right: 1rem;
+}
+
+
+.card__dashboard--head{
+    padding: .4rem .2rem .2rem .4rem;
+    margin-bottom: .6rem;
+    font-size: 1.2em;
+    border-bottom: .1px solid black;
+    background-color: #83aaaa;
+}
+
+
+
+.table__dashboard{
+    width: 100%;
+    font-size:16px;
+    padding-left: .4rem;
+}
+
+.table__row{
+    padding: 0 0 .4rem .4rem;
+}
+
+.table__head{
+    text-align: start;
+}
+
+.table__cell{
+    text-align: end;
+    padding-right:.4rem;
+}
+
+
+
+
+/* ************************* $Zomi & $Zlp Table ************************************ */
+
+.token__dashbord{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+
+.token__dashboard--partition{
+    display:flex;
+    box-shadow: 0 1px 1px 1px black;
+    margin: 2rem 1rem 2rem 1rem;
+    padding-right:2rem;
+    font-size:16px;
+    
+}
+
+.token__dashbord--sub{
+    flex-grow: 2;
+}
+
+
+
+.token__dashbord--head{
+    width: 90%;
+    display:flex;
+    align-items: center;
+    background-color: #83aaaa;
+    padding: .2rem .5rem .2rem .5rem;
+    margin-bottom: .7rem;
+   
+}
+
+
+.ziomi__logo{
+    margin-right: .5rem
+}
+
+.zlp__logo{
+    margin-right: .5rem
+}
+
+
+.table__dashboard--token{
+    padding: 0 .5rem 0 .5rem
+}
+
+
+.table__row--token{
+    width: 85%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 .5rem .5rem .5rem;
+}
+
+
+#ring1, #ring2 {
+    width: 8rem;
+    height: 8rem;
+    border: 10px solid rgb(114, 114, 220); /* Set initial color */
+    border-top: 10px solid rgb(157, 80, 228); /* Hide the top part */
+    border-radius: 50%;
+    margin-top: 1.5rem;
+}
+
+
+.ring-container {
+    position: relative;
+}
+.percentage-display {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#ring1:hover, #ring2:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.7); /* Apply glow effect on hover */
+}
+
+
+
+
+
+/* ************************** index ZLP and ZOMI **************** */
+
+.card__index{
+    box-shadow: 0 1px 1px 1px black;
+    margin: 1rem 1rem 1rem 1rem;
+    /* padding: .5rem .5rem .5rem .5rem; */
+}
+
+.card__index--head{
+    display: flex;
+    align-items: center;
+    background-color: #83aaaa;
+    padding: .5rem .5rem .5rem .5rem;
+}
+
+.logo__stats--index{
+    width: 2rem;
+    height: 2rem;
+    margin-left: .5rem;
+}
+
+
+.card__index--table{
+    width:100%;
+}
+
+.table__index--mainhead:not(:first-of-type){
+        text-align: start;
+        padding-left:0px
+        
+}
+
+.table__index--mainhead:first-of-type{
+    text-align: start;
+    padding:1rem .5rem 1rem 1.5rem;
+}
+
+.table__index--head{
+    display:flex;
+    margin: .2rem .5rem 1.5rem .5rem;
+}
+
+
+.table__index--head > span{
+    margin-left: .5rem;    
+
+}
+
+.index__span> small{
+    text-align: start;
+}
+
+.index__logo{
+    width:3rem;
+    height:3rem;
+    transform: translateY(-8px);
+}
+
+.index__logo:first-of-type{
+    border-radius:50%;
+    border: 1px solid black
+}

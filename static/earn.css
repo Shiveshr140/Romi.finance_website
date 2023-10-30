@@ -1,0 +1,83 @@
+.earn__earn{
+    margin: 2rem 0rem 1rem 1rem;
+}
+
+.earn__earn > h1{
+    font-size: 3.5em;
+}
+
+
+.card__earn{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    box-shadow: 0 1px 1px 1px black;
+    margin: 1rem 1rem 2rem 1rem;
+  
+    
+}
+
+.card__earn1{
+    border-right: .2px solid black;
+    
+}
+
+.card__earn--head{
+    padding: 1rem .4rem 1rem .4rem;
+    margin-bottom:.4rem;
+    border-right: 1px light black;
+    background-color:#83aaaa;
+}
+
+.card__earn--table{
+    width:100%;
+    
+   
+}
+
+.table--earn{
+    width:100%;
+    padding: .3rem .3rem .5rem .2rem;
+    border-bottom: 1px solid black;
+}
+
+.table--earn--right{
+    width:100%;
+    padding: .3rem .3rem .5rem .2rem;
+    margin-bottom: 5.69rem;
+    
+
+}
+
+.table__cell--head{
+    text-align: start;    
+}
+
+.table__cell{
+    text-align: end;
+}
+
+.button__earn{
+    display:flex;
+    align-items: center;
+
+}
+
+
+.button__earn--right{
+    border-top: .1px solid black;
+}
+
+.button__buy--zomi{
+    background-color: rgb(16, 230, 159);
+    padding: .6rem 1.4rem .6rem 1.4rem;
+    margin: 1rem .2rem 1rem .4rem;
+    border:none;
+    border-radius: 6px;
+}
+
+
+.vest__link{
+    color:inherit;
+    text-decoration: underline;
+}
+

@@ -1,0 +1,84 @@
+
+<!-- js for 2 rings -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .ring-container {
+            position: relative;
+        }
+        .percentage-display {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    {% macro ring1() %}
+    <div class="ring-container" onmouseenter="showPercentage('percentage-display1', '94% liquidity', true)" onmouseleave="hidePercentage('percentage-display1', true)" onmousemove="updatePercentage('ring1', 'percentage-display1', '94% liquidity', true)">
+        <div id="ring1"></div>
+        <div id="percentage-display1" class="percentage-display"></div>  <!-- Change this line -->
+    </div>
+    {% endmacro %}
+
+    {% macro ring2() %}
+    <div class="ring-container" onmouseenter="showPercentage('percentage-display2', '49.5% USDC', false)" onmouseleave="hidePercentage('percentage-display2', false)" onmousemove="updatePercentage('ring2', 'percentage-display2', '50.49% ETH', false)">
+        <div id="ring2"></div>
+        <div id="percentage-display2" class="percentage-display"></div>  <!-- Change this line -->
+    </div>
+    {% endmacro %}
+
+    <script>
+    function showPercentage(percentageDisplayId, text, isRing1) {
+        const percentageDisplay = document.getElementById(percentageDisplayId);
+        percentageDisplay.textContent = text;
+        percentageDisplay.style.display = 'block';
+
+        if (isRing1) {
+            document.getElementById('ring1').style.boxShadow = '0 0 10px rgba(0, 0, 255, 0.7)';
+            document.getElementById('ring2').style.boxShadow = 'none';
+        } else {
+            document.getElementById('ring2').style.boxShadow = '0 0 10px rgba(0, 0, 255, 0.7)';
+            document.getElementById('ring1').style.boxShadow = 'none';
+        }
+    }
+
+    function hidePercentage(percentageDisplayId, isRing1) {
+        const percentageDisplay = document.getElementById(percentageDisplayId);
+        percentageDisplay.style.display = 'none';
+        percentageDisplay.textContent = '';  <!-- Clear the text -->
+        
+        if (isRing1) {
+            document.getElementById('ring1').style.boxShadow = 'none';
+        } else {
+            document.getElementById('ring2').style.boxShadow = 'none';
+        }
+    }
+
+    function updatePercentage(ringId, percentageDisplayId, text, isRing1) {
+        const ring = document.getElementById(ringId);
+        const percentageDisplay = document.getElementById(percentageDisplayId);
+
+        if (isRing1) {
+            document.getElementById('ring1').style.boxShadow = '0 0 10px rgba(0, 0, 255, 0.7)';
+            document.getElementById('ring2').style.boxShadow = 'none';
+        } else {
+            document.getElementById('ring2').style.boxShadow = '0 0 10px rgba(0, 0, 255, 0.7)';
+            document.getElementById('ring1').style.boxShadow = 'none';
+        }
+
+        percentageDisplay.textContent = text;
+        percentageDisplay.style.display = 'block';
+    }
+    </script>
+</body>
+</html>
